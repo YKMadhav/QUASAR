@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-07-08T10:14:06.309516+00:00",
+  "preprocess_version": "1.0.0",
+  "source_dataset": "datasets/training_dataset.csv",
+  "num_rows": 50000,
+  "num_features": 28,
+  "train_rows": 40000,
+  "test_rows": 10000,
+  "test_size": 0.2,
+  "random_seed": 42,
+  "stratified": true,
+  "non_feature_columns_dropped": [
+    "circuit_name",
+    "source_file"
+  ],
+  "classification_target_column": "reliability_class",
+  "regression_target_column": "reliability_score",
+  "class_mapping": {
+    "0": "HIGH",
+    "1": "LOW",
+    "2": "MEDIUM"
+  },
+  "feature_columns": [
+    "number_of_qubits",
+    "number_of_classical_bits",
+    "depth",
+    "width",
+    "total_operations",
+    "single_qubit_gates",
+    "two_qubit_gates",
+    "three_qubit_gates",
+    "measurement_gates",
+    "parameterized_gates",
+    "entangling_gates",
+    "gate_ccx",
+    "gate_cp",
+    "gate_cx",
+    "gate_cz",
+    "gate_h",
+    "gate_measure",
+    "gate_rx",
+    "gate_ry",
+    "gate_rz",
+    "gate_s",
+    "gate_sdg",
+    "gate_swap",
+    "gate_sx",
+    "gate_t",
+    "gate_x",
+    "gate_y",
+    "gate_z"
+  ]
+}
