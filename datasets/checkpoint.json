@@ -1,0 +1,26 @@
+{
+  "last_completed_batch": 50,
+  "rows_written": 50000,
+  "successful_circuits": 50000,
+  "failed_circuits": 0,
+  "generation_time_seconds": 19163.40264033599,
+  "gate_vocabulary": [
+    "gate_ccx",
+    "gate_cp",
+    "gate_cx",
+    "gate_cz",
+    "gate_h",
+    "gate_measure",
+    "gate_rx",
+    "gate_ry",
+    "gate_rz",
+    "gate_s",
+    "gate_sdg",
+    "gate_swap",
+    "gate_sx",
+    "gate_t",
+    "gate_x",
+    "gate_y",
+    "gate_z"
+  ]
+}

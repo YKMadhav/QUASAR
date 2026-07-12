@@ -1,0 +1,14 @@
+{
+  "completed_batches": 50,
+  "total_batches": 50,
+  "successful_circuits": 50000,
+  "failed_circuits": 0,
+  "rows_written": 50000,
+  "elapsed_time_seconds": 19163.40264033599,
+  "last_completed_batch": 50,
+  "timestamp": "2026-07-07T10:15:16.624229+00:00",
+  "noise_model": "default synthetic NoiseModel (see noise_simulator.build_noise_model)",
+  "shots": 1024,
+  "random_seed": null,
+  "project_version": "0.5.0"
+}
