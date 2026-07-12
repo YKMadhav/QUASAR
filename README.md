@@ -122,6 +122,22 @@ streamlit run app.py
 
 ---
 
+## Sample Circuits
+
+QUASAR includes a collection of sample **OpenQASM** circuits for testing and experimentation.
+
+These circuits are organized into the following categories:
+
+- **Basics** – Fundamental quantum gates and simple circuits
+- **Algorithms** – Common quantum algorithms (e.g., GHZ, QFT)
+- **Advanced** – More complex quantum circuits
+- **Custom** – User-defined and mixed circuits
+- **Edge Cases** – Empty and invalid circuits for validation testing
+
+Use these circuits to explore the complete analysis pipeline without creating your own OpenQASM files.
+
+---
+
 ## Platform Compatibility
 
 QUASAR has been developed and tested on **macOS**.
