@@ -99,6 +99,14 @@ QUASAR
 
 ---
 
+## Platform Compatibility
+
+QUASAR has been developed and tested on **macOS**.
+
+Compatibility with Windows and Linux has not yet been verified. Users on other operating systems may need to make minor environment or dependency adjustments before running the project.
+
+---
+
 ## Author
 
 **Khatwang Madhav Yippili**
