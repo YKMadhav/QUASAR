@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="assets/quasar_logo.png" width="280">
+  <img src="assets/logo.png" width="280">
 </p>
 
 <h1 align="center">QUASAR</h1>
