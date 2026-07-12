@@ -46,17 +46,17 @@ QUASAR addresses this by providing a unified pipeline for circuit analysis, reli
 ```text
 QUASAR
 │
-├── assets/            Project logo and static assets
-├── circuits/          Sample OpenQASM circuits
-├── datasets/          Training dataset and metadata
-├── models/            Trained model and preprocessing artifacts
-├── plots/             Evaluation and visualization outputs
-├── reports/           Generated reports
-├── src/               Core implementation modules
+├── assets/              Project logo and static assets
+├── circuits/            Sample OpenQASM circuits
+├── datasets/            Training dataset and metadata
+├── models/              Trained model and preprocessing artifacts
+├── plots/               Evaluation and visualization outputs
+├── reports/             Generated reports
+├── src/                 Core implementation modules
 │
-├── app.py             Streamlit application
-├── main.py            Main analysis pipeline
-├── generate_dataset.py Dataset generation utility
+├── app.py               Streamlit application
+├── main.py              Main analysis pipeline
+├── generate_dataset.py  Dataset generation utility
 ├── README.md
 ├── LICENSE
 ├── CHANGELOG.md
