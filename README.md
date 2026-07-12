@@ -99,6 +99,29 @@ QUASAR
 
 ---
 
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YKMadhav/QUASAR.git
+cd QUASAR
+```
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Launch the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+---
+
 ## Platform Compatibility
 
 QUASAR has been developed and tested on **macOS**.
