@@ -4,8 +4,6 @@
 
 ### An AI-Assisted Quantum Circuit Reliability Analysis Platform
 
-> **Version:** 1.0.0 (Draft Foundation)
-
 ------------------------------------------------------------------------
 
 ## Overview
