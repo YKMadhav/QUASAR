@@ -1,0 +1,180 @@
+======================================================================
+Quantum-Reliability-AI -- Model Explanation Report
+======================================================================
+
+Explained Model         : gradient_boosting
+Model Type              : GradientBoostingClassifier
+Generated At (UTC)      : 2026-07-11T10:01:20.308643+00:00
+Test Set Rows           : 10000
+SHAP Sample Rows        : 500
+
+----------------------------------------------------------------------
+SHAP Computation Strategy
+----------------------------------------------------------------------
+Method Used             : shap.Explainer(predict_proba) [model-agnostic fallback]
+shap.TreeExplainer was attempted first (as it is exact and fast for tree ensembles) but was not usable for this model, so this module automatically fell back to a model-agnostic shap.Explainer built around the model's own predict_proba -- no crash, no manual intervention required.
+Reason TreeExplainer was abandoned: shap.TreeExplainer raised InvalidModelError: GradientBoostingClassifier is only supported for binary classification right now!
+
+----------------------------------------------------------------------
+Global Feature Importance (SHAP, averaged across classes)
+----------------------------------------------------------------------
+The features below moved the model's predictions the most, on average, across every circuit in the SHAP sample and every reliability class. This is the single best answer to 'what does this model pay attention to, overall'.
+
+   1. measurement_gates              0.06792
+   2. gate_measure                   0.05938
+   3. number_of_classical_bits       0.05219
+   4. entangling_gates               0.04782
+   5. width                          0.04778
+   6. number_of_qubits               0.04707
+   7. gate_ccx                       0.02973
+   8. three_qubit_gates              0.02813
+   9. single_qubit_gates             0.01774
+  10. gate_cx                        0.01438
+  11. gate_rx                        0.01395
+  12. gate_ry                        0.01246
+  13. total_operations               0.01182
+  14. two_qubit_gates                0.01168
+  15. gate_sx                        0.00971
+
+----------------------------------------------------------------------
+Per-Class Feature Importance (SHAP)
+----------------------------------------------------------------------
+The same ranking, computed separately for each reliability class -- useful when a feature matters a great deal for distinguishing one class (e.g. HIGH) but not another.
+
+Class: HIGH
+   1. measurement_gates              0.06378
+   2. width                          0.05633
+   3. number_of_classical_bits       0.04990
+   4. number_of_qubits               0.04847
+   5. gate_measure                   0.04553
+   6. entangling_gates               0.03961
+   7. gate_ccx                       0.03205
+   8. three_qubit_gates              0.02798
+   9. gate_rx                        0.01824
+  10. two_qubit_gates                0.01611
+  11. gate_ry                        0.01469
+  12. gate_sx                        0.01255
+  13. gate_h                         0.01054
+  14. total_operations               0.00940
+  15. depth                          0.00885
+
+Class: LOW
+   1. gate_measure                   0.08514
+   2. measurement_gates              0.08501
+   3. number_of_classical_bits       0.06707
+   4. entangling_gates               0.06294
+   5. number_of_qubits               0.05777
+   6. width                          0.05025
+   7. gate_ccx                       0.03527
+   8. three_qubit_gates              0.03507
+   9. single_qubit_gates             0.02276
+  10. gate_cx                        0.01956
+  11. gate_rx                        0.01285
+  12. gate_ry                        0.01213
+  13. gate_cz                        0.01123
+  14. total_operations               0.01080
+  15. gate_sx                        0.00961
+
+Class: MEDIUM
+   1. measurement_gates              0.05496
+   2. gate_measure                   0.04745
+   3. entangling_gates               0.04090
+   4. number_of_classical_bits       0.03961
+   5. width                          0.03676
+   6. number_of_qubits               0.03498
+   7. single_qubit_gates             0.02341
+   8. gate_ccx                       0.02188
+   9. three_qubit_gates              0.02135
+  10. gate_cx                        0.01613
+  11. total_operations               0.01526
+  12. depth                          0.01199
+  13. two_qubit_gates                0.01108
+  14. parameterized_gates            0.01092
+  15. gate_rx                        0.01077
+
+----------------------------------------------------------------------
+Local Explanations (LIME) -- One Representative Circuit Per Class
+----------------------------------------------------------------------
+Each example below is the test-set circuit the model is most confident belongs to that reliability class. Local contributions come from LIME's own linear surrogate model fit around that single circuit -- they explain THIS prediction, not the model in general.
+
+--- HIGH ---
+Test Row Index      : 2949
+True Class          : HIGH
+Predicted Class     : HIGH
+Confidence          : 0.9995 (99.9%)
+
+Top Local Contributions (feature condition -> signed weight):
+  measurement_gates <= 4.00                     +0.15503  (supports prediction)
+  width <= 8.00                                 +0.14257  (supports prediction)
+  number_of_classical_bits <= 4.00              +0.12993  (supports prediction)
+  number_of_qubits <= 4.00                      +0.12747  (supports prediction)
+  two_qubit_gates <= 14.00                      +0.09892  (supports prediction)
+  gate_measure <= 4.00                          +0.09070  (supports prediction)
+  entangling_gates <= 15.75                     +0.08892  (supports prediction)
+  gate_ccx <= 0.00                              +0.07489  (supports prediction)
+  three_qubit_gates <= 0.00                     +0.06409  (supports prediction)
+  gate_sx <= 2.00                               -0.04973  (opposes prediction)
+
+Plot: plots/explainability/lime_explanation_high.png
+
+--- LOW ---
+Test Row Index      : 5185
+True Class          : LOW
+Predicted Class     : LOW
+Confidence          : 0.9999 (100.0%)
+
+Top Local Contributions (feature condition -> signed weight):
+  entangling_gates <= 15.75                     -0.22639  (opposes prediction)
+  gate_measure > 10.00                          +0.20352  (supports prediction)
+  measurement_gates > 10.00                     +0.18582  (supports prediction)
+  width > 20.00                                 +0.15381  (supports prediction)
+  number_of_classical_bits > 10.00              +0.14583  (supports prediction)
+  number_of_qubits > 10.00                      +0.13751  (supports prediction)
+  single_qubit_gates <= 37.00                   +0.13337  (supports prediction)
+  gate_cx <= 3.00                               -0.07946  (opposes prediction)
+  gate_sx <= 2.00                               +0.06068  (supports prediction)
+  gate_rx <= 1.00                               +0.05126  (supports prediction)
+
+Plot: plots/explainability/lime_explanation_low.png
+
+--- MEDIUM ---
+Test Row Index      : 9807
+True Class          : MEDIUM
+Predicted Class     : MEDIUM
+Confidence          : 0.9948 (99.5%)
+
+Top Local Contributions (feature condition -> signed weight):
+  4.00 < measurement_gates <= 7.00              +0.12256  (supports prediction)
+  4.00 < number_of_qubits <= 7.00               +0.08670  (supports prediction)
+  8.00 < width <= 14.00                         +0.08296  (supports prediction)
+  4.00 < gate_measure <= 7.00                   +0.08208  (supports prediction)
+  4.00 < number_of_classical_bits <= 7.00       +0.07423  (supports prediction)
+  single_qubit_gates > 128.00                   +0.04964  (supports prediction)
+  depth > 40.00                                 +0.03865  (supports prediction)
+  35.00 < entangling_gates <= 62.00             -0.03474  (opposes prediction)
+  gate_cz > 11.00                               -0.03068  (opposes prediction)
+  gate_h > 12.00                                +0.02561  (supports prediction)
+
+Plot: plots/explainability/lime_explanation_medium.png
+
+----------------------------------------------------------------------
+Generated Plots
+----------------------------------------------------------------------
+shap_global_importance          : plots/explainability/shap_global_importance.png
+shap_importance_by_class        : plots/explainability/shap_importance_by_class.png
+shap_beeswarm_high              : plots/explainability/shap_beeswarm_high.png
+shap_beeswarm_low               : plots/explainability/shap_beeswarm_low.png
+shap_beeswarm_medium            : plots/explainability/shap_beeswarm_medium.png
+lime_explanation_high           : plots/explainability/lime_explanation_high.png
+lime_explanation_low            : plots/explainability/lime_explanation_low.png
+lime_explanation_medium         : plots/explainability/lime_explanation_medium.png
+
+----------------------------------------------------------------------
+Notes and Limitations
+----------------------------------------------------------------------
+SHAP values were computed with shap.Explainer(predict_proba) [model-agnostic fallback]. See the 'SHAP Computation Strategy' section above for whether the exact tree-based explainer or the model-agnostic fallback was used, and why.
+SHAP values were computed on a random sample of 500 test rows (out of 10000) for tractability; the global and per-class rankings above reflect that sample, not necessarily every row.
+LIME explanations are local: each one is only valid around the single circuit it explains, fit from perturbations of that circuit's own feature values, and should not be read as a global feature-importance statement.
+As with evaluate_model.py, this module never retrains or modifies the winning model -- it only calls .predict / .predict_proba on the estimator train_model.py already produced and saved.
+
+Explanation Complete.

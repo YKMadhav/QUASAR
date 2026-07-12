@@ -1,0 +1,52 @@
+======================================================================
+Quantum-Reliability-AI -- Model Evaluation Report
+======================================================================
+
+Evaluated Model    : gradient_boosting
+Classes            : HIGH, LOW, MEDIUM
+Training Rows      : 40000
+Test Rows          : 10000
+Feature Count      : 28
+
+----------------------------------------------------------------------
+Overall Metrics (Test Set)
+----------------------------------------------------------------------
+Accuracy                    : 0.8864
+Precision (macro)           : 0.8633
+Recall (macro)              : 0.8647
+F1 Score (macro)            : 0.8640
+Precision (weighted)        : 0.8864
+Recall (weighted)           : 0.8864
+F1 Score (weighted)         : 0.8864
+
+----------------------------------------------------------------------
+ROC AUC (One-vs-Rest)
+----------------------------------------------------------------------
+HIGH                : 0.9824
+LOW                 : 0.9926
+MEDIUM              : 0.9545
+micro-average       : 0.9816
+
+----------------------------------------------------------------------
+Per-Class Classification Report
+----------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+        HIGH       0.85      0.87      0.86      2538
+         LOW       0.95      0.95      0.95      4999
+      MEDIUM       0.78      0.77      0.78      2463
+
+    accuracy                           0.89     10000
+   macro avg       0.86      0.86      0.86     10000
+weighted avg       0.89      0.89      0.89     10000
+
+----------------------------------------------------------------------
+Generated Plots
+----------------------------------------------------------------------
+confusion_matrix        : plots/evaluation/confusion_matrix.png
+roc_curve               : plots/evaluation/roc_curve.png
+feature_importance      : plots/evaluation/feature_importance.png
+learning_curve          : plots/evaluation/learning_curve.png
+prediction_distribution : plots/evaluation/prediction_distribution.png
+
+Evaluation Complete.

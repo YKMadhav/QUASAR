@@ -1,0 +1,191 @@
+
+======================================================================
+DATASET OVERVIEW
+======================================================================
+Rows    : 50000
+Columns : 37
+
+Column Names:
+  - circuit_name
+  - source_file
+  - number_of_qubits
+  - number_of_classical_bits
+  - depth
+  - width
+  - total_operations
+  - single_qubit_gates
+  - two_qubit_gates
+  - three_qubit_gates
+  - measurement_gates
+  - parameterized_gates
+  - entangling_gates
+  - estimated_fidelity
+  - total_variation_distance
+  - hellinger_distance
+  - success_probability_ideal
+  - success_probability_noisy
+  - reliability_class
+  - reliability_score
+  - gate_ccx
+  - gate_cp
+  - gate_cx
+  - gate_cz
+  - gate_h
+  - gate_measure
+  - gate_rx
+  - gate_ry
+  - gate_rz
+  - gate_s
+  - gate_sdg
+  - gate_swap
+  - gate_sx
+  - gate_t
+  - gate_x
+  - gate_y
+  - gate_z
+
+======================================================================
+COLUMN DATA TYPES
+======================================================================
+circuit_name                        object
+source_file                         object
+number_of_qubits                    int64
+number_of_classical_bits            int64
+depth                               int64
+width                               int64
+total_operations                    int64
+single_qubit_gates                  int64
+two_qubit_gates                     int64
+three_qubit_gates                   int64
+measurement_gates                   int64
+parameterized_gates                 int64
+entangling_gates                    int64
+estimated_fidelity                  float64
+total_variation_distance            float64
+hellinger_distance                  float64
+success_probability_ideal           float64
+success_probability_noisy           float64
+reliability_class                   object
+reliability_score                   float64
+gate_ccx                            int64
+gate_cp                             int64
+gate_cx                             int64
+gate_cz                             int64
+gate_h                              int64
+gate_measure                        int64
+gate_rx                             int64
+gate_ry                             int64
+gate_rz                             int64
+gate_s                              int64
+gate_sdg                            int64
+gate_swap                           int64
+gate_sx                             int64
+gate_t                              int64
+gate_x                              int64
+gate_y                              int64
+gate_z                              int64
+
+======================================================================
+MISSING VALUES
+======================================================================
+Total Missing Values : 0
+
+No missing values found.
+
+======================================================================
+DUPLICATE ROWS
+======================================================================
+Duplicate Rows : 0
+
+======================================================================
+DUPLICATE CIRCUITS
+======================================================================
+Duplicate Circuit Names : 0
+
+======================================================================
+NUMERIC FEATURE SUMMARY
+======================================================================
+                             count        mean        std       min        25%         50%         75%         max
+number_of_qubits           50000.0    6.951160   3.163406  2.000000   4.000000    7.000000   10.000000   12.000000
+number_of_classical_bits   50000.0    6.951160   3.163406  2.000000   4.000000    7.000000   10.000000   12.000000
+depth                      50000.0   30.885960  18.705498  2.000000  17.000000   28.000000   40.000000  103.000000
+width                      50000.0   13.902320   6.326811  4.000000   8.000000   14.000000   20.000000   24.000000
+total_operations           50000.0  129.491260  70.572914  3.000000  65.000000  126.500000  209.000000  242.000000
+single_qubit_gates         50000.0   81.558560  49.180884  0.000000  38.000000   75.000000  129.000000  198.000000
+two_qubit_gates            50000.0   37.145120  26.883590  0.000000  14.000000   32.000000   56.000000  144.000000
+three_qubit_gates          50000.0    3.836420   4.406451  0.000000   0.000000    2.000000    6.000000   32.000000
+measurement_gates          50000.0    6.951160   3.163406  2.000000   4.000000    7.000000   10.000000   12.000000
+parameterized_gates        50000.0   43.333280  40.230945  0.000000  14.000000   35.000000   58.000000  187.000000
+entangling_gates           50000.0   40.981540  29.847955  0.000000  16.000000   35.000000   63.000000  161.000000
+estimated_fidelity         50000.0    0.742096   0.267792  0.037698   0.599302    0.850037    0.951068    0.999991
+total_variation_distance   50000.0    0.282582   0.197977  0.001953   0.125000    0.238281    0.406250    0.824219
+hellinger_distance         50000.0    0.330912   0.224206  0.002179   0.157394    0.279331    0.475241    0.897686
+success_probability_ideal  50000.0    0.149715   0.185652  0.002930   0.019531    0.068359    0.218750    1.000000
+success_probability_noisy  50000.0    0.121674   0.171982  0.000000   0.007812    0.041016    0.167969    0.970703
+reliability_score          50000.0   74.209647  26.779161  3.769795  59.930227   85.003665   95.106793   99.999051
+gate_ccx                   50000.0    3.836420   4.406451  0.000000   0.000000    2.000000    6.000000   32.000000
+gate_cp                    50000.0   10.482640  11.699855  0.000000   2.000000    8.000000   15.000000   85.000000
+gate_cx                    50000.0   11.774740  14.476813  0.000000   3.000000    8.000000   15.000000   77.000000
+gate_cz                    50000.0    7.334800   7.019864  0.000000   1.000000    6.000000   11.000000   44.000000
+gate_h                     50000.0    7.689400   6.244321  0.000000   2.000000    6.000000   12.000000   35.000000
+gate_measure               50000.0    6.951160   3.163406  2.000000   4.000000    7.000000   10.000000   12.000000
+gate_rx                    50000.0    8.413120  10.650609  0.000000   1.000000    6.000000   11.000000   73.000000
+gate_ry                    50000.0   12.209840  16.350405  0.000000   3.000000    7.000000   13.000000   77.000000
+gate_rz                    50000.0   12.227680  16.364785  0.000000   3.000000    7.000000   13.000000   77.000000
+gate_s                     50000.0    6.849860   5.707652  0.000000   2.000000    6.000000   11.000000   36.000000
+gate_sdg                   50000.0    0.956960   3.846188  0.000000   0.000000    0.000000    0.000000   33.000000
+gate_swap                  50000.0    7.552940   7.046437  0.000000   2.000000    6.000000   12.000000   45.000000
+gate_sx                    50000.0    6.828360   5.690268  0.000000   2.000000    6.000000   11.000000   33.000000
+gate_t                     50000.0    5.884720   5.384820  0.000000   1.000000    5.000000   10.000000   30.000000
+gate_x                     50000.0    6.827940   5.707660  0.000000   2.000000    6.000000   11.000000   35.000000
+gate_y                     50000.0    6.845680   5.708239  0.000000   2.000000    6.000000   11.000000   32.000000
+gate_z                     50000.0    6.825000   5.689237  0.000000   2.000000    6.000000   11.000000   37.000000
+
+======================================================================
+RELIABILITY SCORE
+======================================================================
+Minimum : 3.7698
+Maximum : 99.9991
+Mean    : 74.2096
+Median  : 85.0037
+
+======================================================================
+RELIABILITY CLASS DISTRIBUTION
+======================================================================
+LOW               24998 (50.00%)
+HIGH              12688 (25.38%)
+MEDIUM            12314 (24.63%)
+
+======================================================================
+INVALID VALUE CHECKS
+======================================================================
+estimated_fidelity                  0
+success_probability_ideal           0
+success_probability_noisy           0
+total_variation_distance            0
+hellinger_distance                  0
+depth                               0
+width                               0
+number_of_qubits                    0
+total_operations                    0
+
+======================================================================
+INTERNAL CONSISTENCY CHECKS
+======================================================================
+[PASS] Classical bits equal measurement gates
+[PASS] Total operations match gate-category totals
+[PASS] Single-qubit gate totals
+[PASS] Two-qubit gate totals
+[PASS] Three-qubit gate totals
+[PASS] Entangling gate totals
+[PASS] Measurement gate totals
+
+======================================================================
+VALIDATION SUMMARY
+======================================================================
+Rows Checked              : 50000
+Columns Checked           : 37
+Missing Values            : 0
+Duplicate Rows            : 0
+
+Validation Complete.
