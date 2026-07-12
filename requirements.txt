@@ -1,0 +1,13 @@
+qiskit==2.5.0
+qiskit-qasm3-import==0.6.0
+qiskit-aer==0.17.2
+streamlit==1.51.0
+matplotlib==3.10.6
+numpy==2.3.5
+pandas==2.3.3
+seaborn==0.13.2
+scikit-learn==1.7.2
+joblib==1.5.2
+shap==0.52.0
+lime==0.2.0.1
+plotly==6.3.0

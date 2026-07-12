@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quasar"
+version = "0.3.0"
+description = "AI-Assisted Quantum Circuit Reliability Analyzer"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "QUASAR Team"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "qiskit==2.5.0",
+    "qiskit-qasm3-import==0.6.0",
+    "qiskit-aer==0.17.2",
+    "streamlit==1.51.0",
+    "matplotlib==3.10.6",
+    "numpy==2.3.5",
+    "pandas==2.3.3",
+    "seaborn==0.13.2",
+    "scikit-learn==1.7.2",
+    "joblib==1.5.2",
+    "shap==0.52.0",
+    "lime==0.2.0.1",
+    "plotly==6.3.0",
+]
+
+[project.scripts]
+quasar = "main:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
