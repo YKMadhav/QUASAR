@@ -120,6 +120,8 @@ Launch the Streamlit application:
 streamlit run app.py
 ```
 
+After launching the application, open the local Streamlit URL displayed in the terminal (typically `http://localhost:8501`) and upload an OpenQASM circuit for analysis.
+
 ---
 
 ## Sample Circuits
