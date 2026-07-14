@@ -18,10 +18,6 @@ By combining **Qiskit**, **Machine Learning**, **Quantum Noise Simulation**, and
 
 ---
 
-![Dashboard 1](docs/screenshots/ui_screenshot_1.png)
-
----
-
 ## Problem Statement
 
 Current quantum computers operate in the Noisy Intermediate-Scale Quantum (NISQ) era, where gate errors, decoherence, and measurement noise reduce execution reliability. Assessing circuit reliability before deployment is therefore an important challenge for researchers and developers.
@@ -88,6 +84,18 @@ QUASAR
 
 ---
 
+## Dashboard Preview
+
+![Dashboard 1](docs/screenshots/ui_screenshot_1.png)
+
+![Dashboard 1](docs/screenshots/ui_screenshot_2.png)
+
+![Dashboard 1](docs/screenshots/ui_screenshot_3.png)
+
+![Dashboard 1](docs/screenshots/ui_screenshot_5.png)
+
+---
+
 ## Technology Stack
 
 - Python
@@ -141,16 +149,6 @@ These circuits are organized into the following categories:
 - **Edge Cases** – Empty and invalid circuits for validation testing
 
 Use these circuits to explore the complete analysis pipeline without creating your own OpenQASM files.
-
----
-
-![Dashboard 1](docs/screenshots/ui_screenshot_2.png)
-
-![Dashboard 1](docs/screenshots/ui_screenshot_3.png)
-
-![Dashboard 1](docs/screenshots/ui_screenshot_4.png)
-
-![Dashboard 1](docs/screenshots/ui_screenshot_5.png)
 
 ---
 
