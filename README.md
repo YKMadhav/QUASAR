@@ -18,6 +18,10 @@ By combining **Qiskit**, **Machine Learning**, **Quantum Noise Simulation**, and
 
 ---
 
+![Dashboard 1](docs/screenshots/ui_screenshot_1.png)
+
+---
+
 ## Problem Statement
 
 Current quantum computers operate in the Noisy Intermediate-Scale Quantum (NISQ) era, where gate errors, decoherence, and measurement noise reduce execution reliability. Assessing circuit reliability before deployment is therefore an important challenge for researchers and developers.
@@ -41,7 +45,7 @@ QUASAR addresses this by providing a unified pipeline for circuit analysis, reli
 
 ---
 
-![Dashboard 1](docs/screenshots/ui_screenshot_1.png)
+![Dashboard 1](docs/screenshots/ui_screenshot_2.png)
 
 ---
 
@@ -125,6 +129,10 @@ streamlit run app.py
 ```
 
 After launching the application, open the local Streamlit URL displayed in the terminal (typically `http://localhost:8501`) and upload an OpenQASM circuit for analysis.
+
+---
+
+![Dashboard 1](docs/screenshots/ui_screenshot_1.png)
 
 ---
 
