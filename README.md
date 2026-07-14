@@ -45,10 +45,6 @@ QUASAR addresses this by providing a unified pipeline for circuit analysis, reli
 
 ---
 
-![Dashboard 1](docs/screenshots/ui_screenshot_2.png)
-
----
-
 ## Repository Structure
 
 ```text
@@ -132,10 +128,6 @@ After launching the application, open the local Streamlit URL displayed in the t
 
 ---
 
-![Dashboard 1](docs/screenshots/ui_screenshot_1.png)
-
----
-
 ## Sample Circuits
 
 QUASAR includes a collection of sample **OpenQASM** circuits for testing and experimentation.
@@ -149,6 +141,16 @@ These circuits are organized into the following categories:
 - **Edge Cases** – Empty and invalid circuits for validation testing
 
 Use these circuits to explore the complete analysis pipeline without creating your own OpenQASM files.
+
+---
+
+![Dashboard 1](docs/screenshots/ui_screenshot_2.png)
+
+![Dashboard 1](docs/screenshots/ui_screenshot_3.png)
+
+![Dashboard 1](docs/screenshots/ui_screenshot_4.png)
+
+![Dashboard 1](docs/screenshots/ui_screenshot_5.png)
 
 ---
 
