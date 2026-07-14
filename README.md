@@ -92,6 +92,8 @@ QUASAR
 
 ![Dashboard 1](docs/screenshots/ui_screenshot_3.png)
 
+![Dashboard 1](docs/screenshots/ui_screenshot_4.png)
+
 ![Dashboard 1](docs/screenshots/ui_screenshot_5.png)
 
 ---
