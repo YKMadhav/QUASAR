@@ -41,6 +41,10 @@ QUASAR addresses this by providing a unified pipeline for circuit analysis, reli
 
 ---
 
+![Dashboard 1](docs/screenshots/ui_screenshot_1.png)
+
+---
+
 ## Repository Structure
 
 ```text
